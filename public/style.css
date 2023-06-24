@@ -12,6 +12,9 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  
 }
 
 header{
@@ -70,16 +73,60 @@ nav{
 /* END OF DEFAULT HEADER STYLING */
 
 main{
-  margin-top: 5vw;
+  margin-top: -100px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.form-container{
+  width: 200px;
+}
+
+#weather-input{
+  border-radius: 5px;
+  max-width: 700px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  border-bottom: 1px solid #333;
+  outline: none;
+  transition: border 0.3s linear;
+  margin-bottom: 50px;
+  background-color: transparent;
+  text-align: center;
+
+}
+
+#weather-input:focus{
+  border: 2px solid #333;
 }
 
 .weather-container{
   width: 40vw;
   height: 60vh;
   border-radius: 10px;
+  background-color: #bcbcbc2d;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
+
+@media screen and (max-width: 1400px){
+  .weather-container{
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .weather-container{
+    width: 70vw;
+    min-width: 370px;
+  }
+}
+  
+
+  
+
 
