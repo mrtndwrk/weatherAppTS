@@ -30,7 +30,7 @@
           
               <img src="WeatherNow Logoresize.png" height="50px" alt="WeatherNow Logo" id="logo">
            
-          </h1>
+          
         </div>
         
         <div>        
@@ -61,10 +61,72 @@
         <input type="text" id="weather-input" autocomplete="off" placeholder="e.g. 'Vienna'">
       </form>
     </div>
-    <div class="weather-container">
-      test
-    </div>
-  </main>
 
+    <div class="weather-container">
+      <div id="weather-symbol-container"><img id="weather-symbol" src="weather-icons/sun.png" alt="Weather Icon" data-current-icon></div>
+      <div id="weather-info-container">
+        <div id="weather-info-city" data-current-city>Vienna</div>
+        <div id="weather-info-temp"><span data-current-temp>20</span>&deg;C</div>
+        <div id="weather-info-description" data-current-weather>Sunny</div>
+      </div>
+      
+      <div id="additional-info">
+        <div id="weather-info-humidity">Precip: <span data-current-precip>20</span>ml</div>
+        <div id="weather-info-wind">Wind: <span data-current-wind>20</span>km/h</div>
+      </div>
+
+      <div id="forecast-container" data-forecast-container>
+
+      <div class="forecast-container-day" id="day1">
+        <div id="forecast-container-date">Monday</div>
+        <img id="forecast-icon" src="weather-icons/snow.png" alt="Weather Icon">
+        <div id="forecast-container-temp">
+          <div id="forecast-container-temp-max">Min: 10°C</div>
+          <div id="forecast-container-temp-min">Max: 20°C</div>
+        </div>
+      </div>
+
+      <div class="forecast-container-day" id="day2">
+        <div id="forecast-container-date">Tueday</div>
+        <img id="forecast-icon" src="weather-icons/mist-fog.png" alt="Weather Icon">
+        <div id="forecast-container-temp">
+          <div id="forecast-container-temp-max">Min: 10°C</div>
+          <div id="forecast-container-temp-min">Max: 20°C</div>
+        </div>
+      </div>
+
+      <div class="forecast-container-day" id="day3">
+        <div id="forecast-container-date">Wednesday</div>
+        <img id="forecast-icon" src="weather-icons/cloud.png" alt="Weather Icon">
+        <div id="forecast-container-temp">
+          <div id="forecast-container-temp-max">Min: 10°C</div>
+          <div id="forecast-container-temp-min">Max: 20°C</div>
+        </div>
+      </div>
+
+      <div class="forecast-container-day" id="day4">
+        <div id="forecast-container-date">Thursday</div>
+        <img id="forecast-icon" src="weather-icons/rain.png" alt="Weather Icon">
+        <div id="forecast-container-temp">
+          <div id="forecast-container-temp-max">Min: 10°C</div>
+          <div id="forecast-container-temp-min">Max: 20°C</div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <template id="row-template">
+      <div class="forecast-container-day" id="day1">
+        <div id="forecast-container-date" data-date></div>
+        <img id="forecast-icon" alt="Weather Icon" data-icon>
+        <div id="forecast-container-temp">
+          <div id="forecast-container-temp-max"><span>Min: </span>  <span data-min-temp></span>   <span>&deg;C</span></div>
+          <div id="forecast-container-temp-min"><span>Max: </span>  <span data-max-temp></span>   <span>&deg;C</span></div>
+        </div>
+      </div>
+    </template>
+
+  </main>
   </body>
 </html>
